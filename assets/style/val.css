@@ -1,0 +1,41 @@
+body {
+    font-family: "Cedarville Cursive", cursive;
+    margin: 0;
+    padding: 0;
+    background-color: lightblue;
+}
+
+#wrapper {
+    width: 80%;
+    top: 0;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 30px;
+    background-color: pink;
+}
+
+main {
+    padding: .5em;
+}
+
+h1 {
+    font-size: 60px;
+}
+h2 {
+    font-size: 40px;
+}
+h1, h2 {
+    text-align: center;
+}
+#img-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.small-img {
+    width: 45%;
+    height: 200px;
+    overflow: hidden;
+    object-fit: cover;
+    object-position: center;
+}
