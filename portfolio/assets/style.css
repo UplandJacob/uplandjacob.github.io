@@ -1,0 +1,411 @@
+:root {
+    --black: #000;
+    --accent-dark: #3f5c07;
+    --accent: #8dcf85;
+
+    --font-color: #fafbfc;
+    --dark: #082032;
+
+    --back-dark: #082032;
+    --back-med: #08273f;
+
+    --color-med: #373737;
+    --color: #6a6d6e;
+    --color-light: #fafbfc;
+
+    --color-light-grey: #fafbfc;
+    --main-light: #fafbfc;
+}
+
+#mobile { display: none; }
+
+body {
+    background-color: var(--back-dark);
+    color: var(--font-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: 0.2s all ease;
+}
+
+header, footer {
+    background-color: var(--color-med);
+    color: var(--accent);
+}
+
+header {
+    background-image: url('assets/img/banner.jpg');
+    background-size: 100% 100%;
+    background-position: center;
+    min-height: 180px;
+    text-align: left;
+    font-size: 120%;
+    margin-top: 50px;
+    border-bottom: 4px solid var(--accent-dark);
+    a {
+        text-decoration: none;
+    }
+}
+
+footer {
+    color: var(--main-light);
+    font-size: .8em;
+    font-style: italic;
+    text-align: center;
+    text-decoration: none;
+    padding: 2em 0;
+    clear: both;
+    transition: padding 0.2s ease;
+    a {
+        color: var(--accent);
+        &:hover {
+            color: var(--color);
+        }
+    }
+}
+
+h1 {
+    line-height: 200%;
+    padding: 50px 2em;
+    color: var(--accent);
+    text-shadow: 2px 2px 4px #0008;
+}
+
+#container {
+    display: flex;
+    min-height: 600px;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    text-align: right;
+    width: 100%;
+
+    background-color: var(--back-med);
+    font-weight: bold;
+
+    padding: .5em;
+    padding-right: 50px;
+    margin: 0;
+    z-index: 9999;
+    ul {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: flex-end;
+        margin: 0;
+        font-size: 1.2em;
+        padding-left: 0;
+        list-style-type: none;
+    }
+    li {
+        width: 7em;
+        padding: 0 1em 0 1em;  /* top, bottom: 0 -- left, right: 1em */
+        display: inline;
+    }
+    a {
+        text-decoration: none;
+        text-align: center;
+        display: block;
+        transition: 0.2s color;
+        &:link { color: var(--accent); }
+        &:visited { color: var(--accent); }
+        &:hover { color: var(--color-light); }
+    }
+}
+
+main {
+    padding: .5em;
+    background-color: var(--back-med);
+}
+
+h2 {
+    font-size: 200%;
+    color: var(--accent);
+    border-bottom: 1px solid var(--color-light);
+}
+a {
+    color: var(--accent);
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    th, td {
+        border: 1px solid var(--color-light-grey);
+        border-collapse: collapse;
+        white-space: wrap;
+        padding: 10px;
+    }
+    tr:nth-of-type(even) {
+        background-color: var(--color-light-grey);
+    }
+    th {
+        background-color: var(--color-light);
+    }
+}
+
+.third, .half {
+    float: left;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+.third { width: calc( 100% / 3 ); }
+.half { width: 50%; }
+.clear { clear: both; }
+
+.camp {
+    color: var(--accent-dark);
+    font-style: italic;
+    font-weight: bold;
+}
+
+.intro-box {
+    background-color: var(--color-light);
+    border-left: .5em solid var(--color-dark);
+    padding: 1.5em;
+    margin-bottom: 2em;
+    font-style: italic;
+}
+
+.card {
+    margin: 1em 0;
+    padding: 1em;
+    border-radius: .5em;
+
+    background-color: var(--main-light);
+    border: 1px solid var(--color-light);
+    box-shadow: 2px 2px 10px #0001;
+    margin-bottom: 2em;
+    h2 {
+        margin-top: 0;
+    }
+}
+
+/* Home */
+
+#webInstHero, #dataInstHero, #pythonInstHero {
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    aspect-ratio: 4 / 3;
+    padding-bottom: 1em;
+}
+
+#webInstHero { background-image: url(assets/img/instructors/web_dev_instructor.jpg); }
+#dataInstHero { background-image: url(assets/img/instructors/data_sci_instructor.jpg); }
+#pythonInstHero { background-image: url(assets/img/instructors/python_instructor.jpg); }
+
+#testimonials {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+#testimonials dd {
+    margin-left: 0;
+    padding: 5px;
+    min-height: 80px;
+    border-left: 4px solid var(--accent);
+}
+
+/* Courses */
+
+.courses, .workshops {
+    padding: 80px 0;
+}
+.courses h2, .workshops h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+.course-grid, .workshop-grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.course, .workshop {
+    width: 100%;
+    margin-bottom: 30px;
+    text-align: center;
+    p {
+        flex: 1 1 auto;
+    }
+}
+.course img {
+    max-width: 200px;
+    height: 200px;
+    /* margin-bottom: 20px; */
+}
+.course ul, .workshop ul {
+    /* list-style: none; */
+    align-items: center;
+    width: fit-content;
+    padding: 0;
+    text-align: left;
+}
+
+/* About */
+
+#why-section {
+    margin: 1em 0;
+    padding: .5em 2em;
+    border-radius: .5em;
+
+    background-color: #04293E;
+    color: var(--main-light);
+    ul {
+        columns: 2;
+    }
+    h2 {
+        margin-top: 0;
+        color: var(--accent);
+        border-bottom: 1px solid var(--accent);
+    }
+}
+
+#faq {
+    h2 {
+        border-bottom: 1px solid var(--color-light)
+    }
+    dl dt {
+        color: var(--color-dark);
+        font-weight: bold;
+    }
+    dl dd {
+        color: var(--color-med);
+        border-bottom: 1px solid var(--color-light);
+        padding: 1em 0 1em 2em;
+        margin-bottom: 1em;
+        margin-left: 0;
+    }
+}
+
+/* Store */
+
+.product-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+}
+.product-card {
+    width: 200px;
+    margin: 10px;
+    margin-bottom: 30px;
+    border: 1px solid #DDD;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    img {
+        max-width: 100%;
+        height: auto;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+        margin-bottom: 10px;
+    }
+}
+.price {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Contact */
+
+form#contact {
+    input[type="text"], input[type="email"], textarea {
+        width: 100%;
+    }
+}
+
+/* Shared */
+
+.course button, .product-card button, form input[type="submit"] {
+    background-color: var(--accent-dark);
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    &:hover {
+        background-color: var(--accent);
+    }
+}
+
+#wrapper {
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0;
+    box-shadow: 0 4px 15px #0001;
+    background-color: var(--main-light);
+    transition: 0.1s padding;
+    transition: 0.2s width;
+}
+
+@media screen and (max-width: 1024px) {
+    #wrapper {
+        width: 90%;
+    }
+    header {
+        min-height: 50px;
+        transition: 0.2s min-height;
+    }
+    footer {
+        padding: 1em;
+    }
+    h1 {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        transition: 0.1s padding;
+        line-height: 150%;
+    }
+    .third, .half {
+        padding: 0 2px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #desktop {display: none;}
+    #mobile {display: inline;}
+
+    #wrapper {
+        width: 100%;
+        margin: auto;
+        padding: 0px;
+        transition: 0s width;
+        transition: 0.2s padding;
+    }
+    main {
+        padding: 5px;
+    }
+    header {
+        margin-top: 0;
+        min-height: 75px;
+        border-bottom: none;
+        font-size: 100%;
+    }
+    footer {
+        padding: 1em;
+    }
+    h1 {
+        padding-top: 25px;
+        padding-bottom: 25px;
+        line-height: 100%;
+    }
+    nav {
+        position: static;
+        text-align: center;
+        width: auto;
+        padding-right: 0;
+        li {
+            padding: 2px;
+        }
+    }
+    input[type="text"], input[type="email"], textarea {
+        width: calc( 100% - 10px ) !important;
+    }
+}
