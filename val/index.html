@@ -1,23 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Happy Valentines from HallMatthew</title>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+        <title>Jacob's Portfolio</title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap" rel="stylesheet">
-
 		<link rel="stylesheet" href="/assets/style/val.css">
+
+        <meta name="author" content="UplandJacob"/>
+        <meta name="description" content="Stuff and things I've done"/>
+        <meta name="og:description" content="Stuff and things I've done"/>
+        <meta name="keywords" content="code, python, html, programming"/>
+
 		<style>
-			h2 {
-				text-decoration: underline;
+			nav {
+				font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+				position: fixed;
+				top: 0;
+				left: 0;
+				text-align: right;
+				width: 100%;
+
+				background-color: #08273f;
+				font-weight: bold;
+
+				padding: .5em;
+				padding-right: 50px;
+				margin: 0;
+				z-index: 9999;
+				ul {
+					display: flex;
+					flex-wrap: nowrap;
+					justify-content: flex-end;
+					margin: 0;
+					font-size: 1.2em;
+					padding-left: 0;
+					list-style-type: none;
+				}
+				li {
+					width: 7em;
+					padding: 0 1em 0 1em;  /* top, bottom: 0 -- left, right: 1em */
+					display: inline;
+				}
+				a {
+					text-decoration: none;
+					text-align: center;
+					display: block;
+					transition: 0.2s color;
+					&:link { color: #8dcf85; }
+					&:visited { color: #8dcf85; }
+					&:hover { color: #fafbfc; }
+				}
 			}
+
 		</style>
 	</head>
 	<body><div id="wrapper">
+		<nav><ul>
+			<li><a href="/">Home</a></li>
+			<li><a href="/ha-addons">HA Addons</a></li>
+			<li><a href="/snake">Python Snake</a></li>
+			<li><a href="/val">Valentine</a></li>
+		</ul></nav>
+
 		<h1>Happy Valentines</h1>
-		<main>
+		<main style="background-color: transparent; color: black;">
 			<img src="/assets/img/ILoveCheese.png" alt="I love cheese! and you" style="width: 100%;">
 			<h2>Why I Like Ch...You</h2>
 			<ol>
